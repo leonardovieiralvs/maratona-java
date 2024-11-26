@@ -5,7 +5,6 @@ import academy.devdojo.maratonajava.javacore.Bintroducaometodos.dominio.Calculad
 public class CalculadoraTest03 {
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
-        double result = calculadora.divideDoisNumeros(10,5);
-        System.out.println(result);
+        calculadora.imprimeDivisaoDeDoisNumeros(86,0);
     }
 }
