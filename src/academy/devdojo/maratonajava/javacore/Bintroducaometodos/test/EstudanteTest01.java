@@ -5,7 +5,7 @@ import academy.devdojo.maratonajava.javacore.Bintroducaometodos.dominio.ImprimeE
 
 public class EstudanteTest01 {
     public static void main(String[] args) {
-        ImprimeEstudante imprime = new ImprimeEstudante();
+       // ImprimeEstudante imprime = new ImprimeEstudante();
         Estudante estudante01 = new Estudante();
         Estudante estudante02 = new Estudante();
 
@@ -17,6 +17,7 @@ public class EstudanteTest01 {
         estudante02.idade = 23;
         estudante02.sexo = 'M';
 
-        imprime.imprime(estudante01);
+        estudante01.imprime();
+        estudante02.imprime();
     }
 }
