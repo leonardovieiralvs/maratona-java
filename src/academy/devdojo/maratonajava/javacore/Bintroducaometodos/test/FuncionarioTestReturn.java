@@ -1,10 +1,10 @@
 package academy.devdojo.maratonajava.javacore.Bintroducaometodos.test;
 
-import academy.devdojo.maratonajava.javacore.Bintroducaometodos.dominio.Funcionario;
+import academy.devdojo.maratonajava.javacore.Bintroducaometodos.dominio.FuncionarioReturn;
 
-public class FuncionarioTest01 {
+public class FuncionarioTestReturn {
     public static void main(String[] args) {
-        Funcionario funcionario = new Funcionario();
+        FuncionarioReturn funcionario = new FuncionarioReturn();
         funcionario.nome = "\nItachi";
         funcionario.idade = 16;
         funcionario.imprimeFuncionario();
