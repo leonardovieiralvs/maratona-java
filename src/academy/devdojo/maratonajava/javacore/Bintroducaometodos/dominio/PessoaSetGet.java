@@ -9,9 +9,7 @@ public class PessoaSetGet {
         System.out.println(this.idade);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
 
     public void setIdade(int idade) {
         if (idade <= 0) {
