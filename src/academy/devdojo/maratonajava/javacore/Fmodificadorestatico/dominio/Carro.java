@@ -17,11 +17,11 @@ public class Carro {
         System.out.println("VELOCIDADE LIMITE: " + Carro.velocidadeLimite);
     }
 
-    public static void setVelocidadeLimite(Double velocidadeLimite) {
+    public static void setVelocidadeLimite(double velocidadeLimite) {
         Carro.velocidadeLimite = velocidadeLimite;
     }
 
     public static Double getVelocidadeLimite() {
-        return Carro.velocidadeLimite;
+        return getVelocidadeLimite();
     }
 }
