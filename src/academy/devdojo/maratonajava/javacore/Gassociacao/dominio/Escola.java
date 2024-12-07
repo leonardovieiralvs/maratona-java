@@ -15,10 +15,9 @@ public class Escola {
         for (Professor professor : professores) {
             System.out.println(professor.getNome());
         }
-
     }
 
-    public Escola(String nome) { // construtor
+    public Escola(String nome) { // construtor Escola
         this.nome = nome;
     }
 

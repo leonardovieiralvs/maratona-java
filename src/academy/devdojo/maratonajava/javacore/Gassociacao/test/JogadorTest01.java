@@ -10,7 +10,7 @@ public class JogadorTest01 {
         Jogador[] jogadores = {jogador1, jogador2, jogador3};
 
         for (Jogador jogadore : jogadores) {
-            jogadore.imprimeJogador();
+            jogadore.imprime();
 
         }
 

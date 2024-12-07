@@ -8,7 +8,7 @@ public class JogadorTest02 {
         Jogador jogador1 = new Jogador("Neymar");
         Time time = new Time("PSg");
         jogador1.setTime(time);
-        jogador1.imprimeJogador();
+        jogador1.imprime();
 
     }
 }
