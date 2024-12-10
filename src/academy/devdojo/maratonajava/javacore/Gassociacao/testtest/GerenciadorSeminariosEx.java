@@ -7,24 +7,26 @@ import academy.devdojo.maratonajava.javacore.Gassociacao.dominiotest.Seminario;
 
 public class GerenciadorSeminariosEx {
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno("Leonardo", 25);
-        Aluno aluno2 = new Aluno("Bira", 33);
-        Aluno[] alunos = {aluno1, aluno2};
+        Local local = new Local("Local: AV. Carlos Lacerda");
 
-        Professor professor1 = new Professor("Aquiles", "JAVA");
-        Professor professor2 = new Professor("Aquiles", "JAVA");
-        Professor[] professores = {professor1, professor2};
+        Aluno aluno1 = new Aluno("Nome: Leonardo", 25);
+        Aluno[] alunos = {aluno1};
 
-        Local local = new Local("Avenida Tunico");
-
-        Seminario seminario = new Seminario("Fenix", local);
+        Professor professor = new Professor("Professor: Aquiles", "Especialidade: JAVA");
+        Professor[] professores = {professor};
 
 
+        Seminario seminario1 = new Seminario("Seminário: Fenix", local);
+        Seminario[] seminarios = {seminario1};
 
 
+        aluno1.setSeminario(seminario1);
+        aluno1.imprimeAluno();
 
+        seminario1.setLocal(local);
+        seminario1.imprimeSeminario();
 
-
-        System.out.println(aluno1);
+        professor.setSeminarios(seminarios);
+        professor.imprime();
     }
 }

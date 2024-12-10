@@ -1,20 +1,17 @@
 package academy.devdojo.maratonajava.javacore.Gassociacao.dominiotest;
 
 public class Local {
-    private String Local;
-    private Seminario seminario;
-    private Aluno[] alunos;
-    private Professor[] professores;
+    private String endereco;
 
-    public Local(String local) {
-        Local = local;
+    public Local(String endereco) {
+        this.endereco = endereco;
     }
 
-    public String getLocal() {
-        return Local;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setLocal(String local) {
-        Local = local;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 }

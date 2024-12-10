@@ -3,7 +3,6 @@ package academy.devdojo.maratonajava.javacore.Gassociacao.dominiotest;
 public class Aluno {
     private String nome;
     private int idade;
-    private Local local;
     private Seminario seminario;
 
     public Aluno(String nome, int idade) {
@@ -12,11 +11,19 @@ public class Aluno {
     }
 
     public void imprimeAluno() {
+        System.out.println("-----------------");
+        System.out.println("ALUNOS PODERÁ ESTAR EM APENAS UM SEMINÁRIO: ");
         System.out.println(this.nome);
-        System.out.println(this.idade);
-        if (local == null) return;
-        System.out.println(this.local);
-        System.out.println(this.seminario);
+        System.out.println("Idade: " + this.idade);
+        System.out.println(seminario.getNomeSeminario());
+    }
+
+    public Seminario getSeminario() {
+        return seminario;
+    }
+
+    public void setSeminario(Seminario seminario) {
+        this.seminario = seminario;
     }
 
     public String getNome() {
