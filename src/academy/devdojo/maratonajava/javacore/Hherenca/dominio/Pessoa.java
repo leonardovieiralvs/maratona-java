@@ -1,10 +1,22 @@
 package academy.devdojo.maratonajava.javacore.Hherenca.dominio;
 
 public class Pessoa {
-    private String nome;
+    protected String nome;
     private String cpf;
     private Endereco endereco;
     private Funcionario funcionario;
+
+    static {
+        System.out.println("STATIC PESSOA");
+    }
+    {
+        System.out.println("PAI");
+    }
+
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
 
     public void imprime() {
         System.out.println("-----------------------");
@@ -12,8 +24,6 @@ public class Pessoa {
         System.out.println(this.cpf);
         System.out.println(this.endereco.getEndereco() + ", " + this.endereco.getRua());
     }
-
-
 
     public String getNome() {
         return nome;
