@@ -1,7 +1,7 @@
 package academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio;
 
 public class Computador extends Produto {
-    public static final double IMPOSTO_PRODUTO = 0.20;
+    public final double IMPOSTO_PRODUTO = 0.20;
     public Computador(String nome, double valor) {
         super(nome, valor);
     }
@@ -9,6 +9,6 @@ public class Computador extends Produto {
     @Override
     public double calcularImposto() {
         System.out.println("Calculando imposto do computador!");
-        return this.valor * IMPOSTO_PRODUTO;
+        return this.valor * 0.20;
     }
 }

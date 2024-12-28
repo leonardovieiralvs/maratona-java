@@ -1,8 +1,8 @@
 package academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio;
 
 public class Tomate extends Produto {
+    protected String dataValidade;
     public static final double IMPOSTO_PRODUTO = 0.06;
-    private String dataValidade;
     public Tomate(String nome, double valor) {
         super(nome, valor);
     }
