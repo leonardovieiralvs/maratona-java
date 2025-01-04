@@ -5,7 +5,7 @@ public class ControleRemoto implements Controlador{
     private boolean ligado;
     private boolean tocando;
 
-    public ControleRemoto(int volume, boolean ligado, boolean tocando) {
+    public ControleRemoto() {
         this.volume = volume;
         this.ligado = ligado;
         this.tocando = tocando;
