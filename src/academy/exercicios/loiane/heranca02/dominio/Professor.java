@@ -1,5 +1,7 @@
 package academy.exercicios.loiane.heranca02.dominio;
 
+import academy.exercicios.loiane.heranca02.dominio.Pessoa;
+
 public class Professor extends Pessoa {
     private String departamento;
     private String nomeCurso;
@@ -7,6 +9,10 @@ public class Professor extends Pessoa {
 
     public Professor(String nome, String endereço, String telefone, String cpf) {
         super(nome, endereço, telefone, cpf);
+    }
+
+    public void testVisibilidade() {
+        super.cpf = "1111111111";
     }
 
     public double getSalario() {
@@ -27,5 +33,10 @@ public class Professor extends Pessoa {
 
     public double calcularSalarioLiquido() {
         return 0;
+    }
+
+    @Override
+    public String obterEtiquetaEndereco() {
+        return "Endereço do Professor: " + this.getEndereço();
     }
 }

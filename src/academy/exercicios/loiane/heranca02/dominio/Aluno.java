@@ -1,6 +1,8 @@
 package academy.exercicios.loiane.heranca02.dominio;
 
-public class Aluno extends Pessoa {
+import academy.exercicios.loiane.heranca02.dominio.Pessoa;
+
+public class    Aluno extends Pessoa{
 
     private String curso;
     private double[] notas;
@@ -19,5 +21,11 @@ public class Aluno extends Pessoa {
 
     public void metodoQualquer() {
         super.setCpf("3231212");
+    }
+
+    @Override
+    public String obterEtiquetaEndereco() {
+        String s = "Endereço do Aluno: " + this.getEndereço();
+        return s;
     }
 }

@@ -4,7 +4,8 @@ public class Pessoa {
     private String nome;
     private String endereço;
     private String telefone;
-    private String cpf;
+    public String cpf;
+    protected String visiblidade;
 
 
 
@@ -45,5 +46,10 @@ public class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String obterEtiquetaEndereco() {
+
+        return endereço;
     }
 }
