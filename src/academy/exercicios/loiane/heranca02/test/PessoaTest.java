@@ -15,5 +15,6 @@ public class PessoaTest {
         System.out.println(pessoa.obterEtiquetaEndereco());
         System.out.println(aluno.obterEtiquetaEndereco());
         System.out.println(professor.obterEtiquetaEndereco());
+        System.out.println(pessoa);
     }
 }
