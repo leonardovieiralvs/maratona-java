@@ -13,8 +13,11 @@ public class ExceptionTest01 {
         try {
             boolean isCriado = file.createNewFile();
             System.out.println("Arquivo criado! "+ isCriado);
+            throw new RuntimeException();
         } catch (IOException e) {
             System.out.println("Error");
+        }finally {
+            System.out.println("Fechando arquivo SO");
         }
     }
 }
