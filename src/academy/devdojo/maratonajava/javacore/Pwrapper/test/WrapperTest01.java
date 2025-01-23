@@ -2,25 +2,22 @@ package academy.devdojo.maratonajava.javacore.Pwrapper.test;
 
 public class WrapperTest01 {
     public static void main(String[] args) {
-        byte b = 1;
-        Byte byteW = 1;
-        Short shortW = 1;
-        Integer a = 2;
-        Character baaa = 'a';
-        Integer intW = 1;
+        Integer cachorro = Integer.parseInt("3");
+        Integer gato = Integer.parseInt("1");
+        int i = gato;
 
-        int i = intW;
+        System.out.println(i);
+        System.out.println(gato);
+        System.out.println(cachorro);
 
-        Boolean booleanW = true;
+        boolean isTrue = Boolean.parseBoolean("True");
+        System.out.println(isTrue);
 
-        Integer intP = Integer.parseInt("2");
-
-        Boolean verdadeiro = Boolean.parseBoolean("LA ELE");
-        System.out.println(verdadeiro);
-
-        String texto = "3.14";
-        Double numero = Double.parseDouble(texto); // Converte a String "3.14" para o valor double 3.14
-        System.out.println(numero); // Vai imprimir 3.14
+        Character charW = 'W';
+        System.out.println(Character.isDigit('A'));
+        System.out.println(Character.isDigit('9'));
+        System.out.println(Character.toUpperCase('a'));
+        System.out.println(Character.toLowerCase('D'));
 
     }
 }
