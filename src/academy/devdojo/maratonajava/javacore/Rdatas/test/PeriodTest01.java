@@ -1,9 +1,7 @@
-package academy.devdojo.maratonajava.javacore.Sformatacao.test;
+package academy.devdojo.maratonajava.javacore.Rdatas.test;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.temporal.ChronoField;
-import java.time.temporal.ChronoUnit;
 
 public class PeriodTest01 {
     public static void main(String[] args) {

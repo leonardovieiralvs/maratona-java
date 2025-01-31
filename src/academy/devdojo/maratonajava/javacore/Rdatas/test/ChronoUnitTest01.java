@@ -1,6 +1,4 @@
-package academy.devdojo.maratonajava.javacore.Sformatacao.test;
-
-import academy.devdojo.maratonajava.javacore.Gassociacao.dominiotest.Local;
+package academy.devdojo.maratonajava.javacore.Rdatas.test;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
