@@ -1,12 +1,14 @@
 package academy.devdojo.maratonajava.javacore.Uregex.test;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PatternMatcherTest05 {
     public static void main(String[] args) {
-        String regex = "0[xX][0-9a-fA-F]+(\\s|$)";
-        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
+        String regex = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z])+)+";
+        String texto = "leozymhatake!@hotmail.com, !bira3351@gmail.com.br, magrinhoviradu@.com, lvsbomdebriga@mail.com.br, 11leo@.br";
+        System.out.println(texto.split(",")[1]);
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:   "+ texto);
