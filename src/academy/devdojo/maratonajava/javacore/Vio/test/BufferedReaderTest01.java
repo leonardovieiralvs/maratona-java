@@ -10,6 +10,10 @@ public class BufferedReaderTest01 {
         File file = new File("file.txt");
         try (FileReader fr = new FileReader(file);
              BufferedReader br = new BufferedReader(fr)) {
+            String linha;
+            while((linha = br.readLine()) != null) {
+                System.out.println(linha);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
