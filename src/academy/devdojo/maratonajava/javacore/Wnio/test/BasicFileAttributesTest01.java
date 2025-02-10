@@ -1,26 +1,25 @@
 package academy.devdojo.maratonajava.javacore.Wnio.test;
 
-import java.nio.file.*;
-import java.nio.file.attribute.*;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.FileTime;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 public class BasicFileAttributesTest01 {
     public static void main(String[] args) throws IOException {
-        Path file = Paths.get("example.txt"); // Caminho do arquivo
-        Files.createFile(file);
+        LocalDateTime date = LocalDateTime.now().minusDays(10);
+        
+        File file = new File("pastaTest/subpasta/subsubpasta/file.test");
+        boolean isCreated = file.createNewFile();
+        boolean isModified = file.setLastModified(date.toInstant(ZoneOffset.UTC).toEpochMilli());
 
-        try {
-            BasicFileAttributes attr = Files.readAttributes(file, BasicFileAttributes.class);
-
-            System.out.println("Data de criação: " + attr.creationTime());
-            System.out.println("Última modificação: " + attr.lastModifiedTime());
-            System.out.println("Tamanho (bytes): " + attr.size());
-            System.out.println("É diretório? " + attr.isDirectory());
-            System.out.println("É arquivo? " + attr.isRegularFile());
-
-        } catch (IOException e) {
-            System.out.println("Erro ao obter atributos: " + e.getMessage());
-        }
+        Path path = Paths.get("pastaTest/subpasta/subsubpasta/file2.test");
+        Files.createFile(path);
+        FileTime from = FileTime.from(date.toInstant(ZoneOffset.UTC));
+        Files.setLastModifiedTime(path, from);
     }
 }
-
