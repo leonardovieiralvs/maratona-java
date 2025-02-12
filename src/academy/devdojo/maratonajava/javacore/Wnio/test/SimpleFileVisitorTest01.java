@@ -1,11 +1,10 @@
 package academy.devdojo.maratonajava.javacore.Wnio.test;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
-class ListAllFiles extends SimpleFileVisitor<Path> {
+class ListJavaFiles extends SimpleFileVisitor<Path> {
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
         if (file.getFileName().toString().endsWith(".java")) {
