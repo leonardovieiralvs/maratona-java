@@ -27,7 +27,7 @@ public class Aluno implements Serializable {
                 ", Turma='" + turma + '\'' +
                 '}';
     }
-    
+
     public Turma getTurma() {
         return turma;
     }
