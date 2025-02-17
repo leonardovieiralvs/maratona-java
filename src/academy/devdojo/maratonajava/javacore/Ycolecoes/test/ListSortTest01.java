@@ -20,6 +20,5 @@ public class ListSortTest01 {
 
         new Manga(null, null , 0);
 
-
     }
 }
