@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Manga implements Comparable<Manga> {
     private Long id;
-
     private String nome;
     private Double preco;
 
@@ -21,7 +20,7 @@ public class Manga implements Comparable<Manga> {
         // negativo se o this < nextManga;
         // se this == nextManga return 0;
         // positivo se this > nextManga;
-        return this.nome.compareTo(nextManga.getNome());
+        return nome.compareTo(nextManga.getNome());
     }
 
     @Override

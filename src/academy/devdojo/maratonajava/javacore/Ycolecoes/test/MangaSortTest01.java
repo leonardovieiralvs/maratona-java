@@ -1,6 +1,7 @@
 package academy.devdojo.maratonajava.javacore.Ycolecoes.test;
 
 import academy.devdojo.maratonajava.javacore.Ycolecoes.dominio.Manga;
+import academy.devdojo.maratonajava.javacore.Ycolecoes.dominio.MangaByIdComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,17 +14,22 @@ public class MangaSortTest01 {
         mangas.add(new Manga(3L, "Attack on Titan", 5.30));
         mangas.add(new Manga(2L, "Dragon ball Z", 11.40));
         mangas.add(new Manga(1L, "Berserk", 1.60));
-
+        System.out.println("Aleatoriamente: ");
         for (Manga manga : mangas) {
             System.out.println(manga);
         }
 
         Collections.sort(mangas);
-        System.out.println("-----");
+        System.out.println("Ordenado por Nomes: ");
         for (Manga manga : mangas) {
             System.out.println(manga);
         }
 
-
+//        Collections.sort(mangas, new MangaByIdComparator());
+        mangas.sort(new MangaByIdComparator());
+        System.out.println("Ordenado por Id's");
+        for (Manga manga : mangas) {
+            System.out.println(manga);
+        }
     }
 }
