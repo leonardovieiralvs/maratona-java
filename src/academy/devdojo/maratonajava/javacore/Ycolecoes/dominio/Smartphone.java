@@ -1,12 +1,22 @@
 package academy.devdojo.maratonajava.javacore.Ycolecoes.dominio;
 
-public class Smartphone {
+import java.util.Comparator;
+
+public class Smartphone implements Comparable<Smartphone>{
     private String serialNumber;
     private String marca;
 
     public Smartphone(String serialNumber, String marca) {
         this.serialNumber = serialNumber;
         this.marca = marca;
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
     }
 
     @Override
@@ -38,5 +48,10 @@ public class Smartphone {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    @Override
+    public int compareTo(Smartphone smartphone) {
+        return this.getMarca().compareTo(smartphone.getMarca());
     }
 }
