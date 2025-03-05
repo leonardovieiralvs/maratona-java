@@ -30,6 +30,7 @@ public class MetodoGenericoTest01 {
 
     public static <T> void criarArrayComUmObjeto1(T t) {
         List<T> list = new ArrayList<>();
+        list.add(t);
         System.out.println(list);
     }
 }
