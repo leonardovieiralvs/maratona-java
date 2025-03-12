@@ -1,8 +1,7 @@
-package academy.devdojo.maratonajava.javacore.ZZBcomportamento.interfaces;
+package academy.devdojo.maratonajava.javacore.ZZclambdas;
 
 import academy.devdojo.maratonajava.javacore.ZZBcomportamento.dominio.Car;
 
-@FunctionalInterface
 public interface CarPredicate {
     boolean test(Car car);
 }
