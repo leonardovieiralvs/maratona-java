@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.ZZclambdas.test;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class lambdaTest01 {
+public class LambdaTest01 {
     public static void main(String[] args) {
         List<String> strings = List.of("Obito", "Zetsu", "Itachi");
         List<Integer> integers = List.of(1,2,3,4,5);
