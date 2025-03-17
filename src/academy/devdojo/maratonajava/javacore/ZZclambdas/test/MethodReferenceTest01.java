@@ -4,8 +4,6 @@ import academy.devdojo.maratonajava.javacore.ZZclambdas.dominio.Anime;
 import academy.devdojo.maratonajava.javacore.ZZclambdas.service.AnimeComparators;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class MethodReferenceTest01 {

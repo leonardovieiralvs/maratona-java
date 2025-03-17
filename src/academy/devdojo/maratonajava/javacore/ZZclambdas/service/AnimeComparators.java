@@ -10,4 +10,8 @@ public class AnimeComparators {
     public static int comparatorByTitle(Anime a1, Anime a2) {
         return a1.getName().compareTo(a2.getName());
     }
+
+    public int comparatorByTitleNonStatic(Anime a1, Anime a2) {
+        return a1.getName().compareTo(a2.getName());
+    }
 }
