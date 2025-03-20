@@ -10,11 +10,17 @@ public class StreamTest03 {
             new LightNovel("Donkey", 1.89),
             new LightNovel("Rabbit", 2),
             new LightNovel("Squirt", 0.5),
+            new LightNovel("Squirt", 0.5),
+            new LightNovel("Dog", 99),
             new LightNovel("Dog", 99),
             new LightNovel("Cat", 1.5)));
 
     public static void main(String[] args) {
         lightNovels.forEach(System.out::println);
 //        lightNovels.stream().forEach(System.out::println);
+        long count1 = lightNovels.stream().filter(lightNovel -> lightNovel.getPrice() <= 4).count();
+        long count = lightNovels.stream().distinct().filter(ln -> ln.getPrice() <= 4).count();
+        System.out.println(count1);
+        System.out.println(count);
     }
 }
