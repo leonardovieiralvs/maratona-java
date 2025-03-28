@@ -5,7 +5,7 @@ import academy.devdojo.maratonajava.javacore.ZZEstreams.dominio.LightNovel;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StremTest11 {
+public class StreamTest11 {
     public static List<LightNovel> lightNovels = new ArrayList<>(List.of(new LightNovel("Horse", 8.50),
             new LightNovel("Donkey", 1.89),
             new LightNovel("Rabbit", 2),
