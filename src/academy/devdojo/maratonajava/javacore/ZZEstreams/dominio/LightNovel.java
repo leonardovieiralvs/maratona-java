@@ -6,6 +6,7 @@ public class LightNovel {
     private String tittle;
     private double price;
     private Category category;
+    private Promotion promotion;
 
     public LightNovel(String tittle, double price) {
         this.tittle = tittle;
@@ -51,5 +52,13 @@ public class LightNovel {
 
     public Category getCategory() {
         return category;
+    }
+
+    public Promotion getPromotion() {
+        return promotion;
+    }
+
+    public void setPromotion(Promotion promotion) {
+        this.promotion = promotion;
     }
 }
