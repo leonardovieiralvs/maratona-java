@@ -6,7 +6,7 @@ import academy.devdojo.maratonajava.javacore.ZZEstreams.dominio.LightNovel;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StreamTest14 {
+public class StreamTest15 {
     public static List<LightNovel> lightNovels = new ArrayList<>(List.of(
             new LightNovel("Horse", 8.50, Category.DRAMA),
             new LightNovel("Donkey", 1.89, Category.FANTASY),
@@ -17,12 +17,12 @@ public class StreamTest14 {
             new LightNovel("Cat", 1.5, Category.DRAMA)));
 
     public static void main(String[] args) {
+        Map<Category, DoubleSummaryStatistics> collect = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.summarizingDouble(LightNovel::getPrice)));
+        System.out.print(collect);
 
-//        lightNovels.stream().max(Comparator.comparing(LightNovel::getPrice)).ifPresent(System.out::println);
-        Map<Category, Long> collectList = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.counting()));
-        Map<Category, Optional<LightNovel>> collect = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory,
-                Collectors.maxBy(Comparator.comparing(LightNovel::getPrice))));
+        System.out.println("----------------");
 
-        //desisti
+        lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.summarizingDouble(LightNovel::getPrice)));
+
     }
 }
