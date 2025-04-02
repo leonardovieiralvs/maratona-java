@@ -1,34 +1,35 @@
 package academy.devdojo.maratonajava.javacore.zzFThreads;
 
+class ThreadImplements implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Thread.currentThread().getName() + " " + i);
+        }
+    }
+}
 
-class ThreadExample extends Thread {
+class ThreadExtends extends Thread {
     private final char c;
 
-    public ThreadExample(char c) {
+    public ThreadExtends(char c) {
         this.c = c;
     }
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName());
-        for (int i = 0; i < 500; i++) {
-            System.out.print(c);
-            if (i % 100 == 0) {
-                System.out.println();
-            }
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Thread.currentThread().getName() + " " + i);
         }
     }
 }
 
 public class ThreadTest01 {
     public static void main(String[] args) {
-        ThreadExample t1 = new ThreadExample('A');
-        ThreadExample t2 = new ThreadExample('B');
-        ThreadExample t3 = new ThreadExample('C');
-        ThreadExample t4 = new ThreadExample('D');
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
+        Thread testImplements = new Thread(new ThreadImplements());
+        testImplements.start();
+        System.out.println("--------");
+        ThreadExtends testExtends = new ThreadExtends('1');
+        testExtends.start();
     }
 }
