@@ -22,24 +22,18 @@ public class ThreadAccountTest01 implements Runnable {
             if (account.getBalance() <= 0) {
                 System.out.println(Thread.currentThread().getName() + " seu saldo é insuficiente para saque!");
             }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
         }
     }
 
-    private void withdraw(int amount) {
-        synchronized (account) {
-            System.out.println(Thread.currentThread().getName() + " Está dentro do SYNCH");
-            if (account.getBalance() >= amount) {
-                System.out.println(Thread.currentThread().getName() + " Está indo sacar o dinheiro");
-                account.withdrawl(amount);
-                System.out.println(Thread.currentThread().getName() + " Completou o saque, valor atual da conta: " + account.getBalance());
-            } else {
-                System.out.println(Thread.currentThread().getName() + " Seu saldo é insuficiente: " + account.getBalance());
-            }
+    private synchronized void withdraw(int amount) {
+
+        if (account.getBalance() >= amount) {
+            System.out.println(Thread.currentThread().getName() + " Está indo sacar o dinheiro");
+            account.withdrawl(amount);
+            System.out.println(Thread.currentThread().getName() + " Completou o saque, valor atual da conta: " + account.getBalance());
+        } else {
+            System.out.println(Thread.currentThread().getName() + " Seu saldo é insuficiente: " + account.getBalance());
+
         }
     }
 }
